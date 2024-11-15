@@ -23,6 +23,12 @@
             "type" : "shell",
             "label" : "cargo run",
             "command" : "cargo run"
+        },
+        {
+            "type" : "shell",
+            "label" : "cargo test",
+            "command" : "cargo test",
+            "group" : "test"
         }
     ]
 }
