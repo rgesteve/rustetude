@@ -2,4 +2,5 @@
 *~
 
 # Compilation artifacts
-hello
+target/**
+
