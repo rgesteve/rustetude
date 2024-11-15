@@ -1,4 +1,4 @@
 fn main() {
-    print!("Hello, world in src!\n");
-    // empty
+    print!("Hello, world, using exit code!\n");
+    std::process::exit(0);
 }

@@ -5,6 +5,8 @@
         {
             "type": "shell",
             "label": "cargo build",
+            // apparently you can "factor out" the `command` property if it's shared
+            // among tasks, see, e.g. https://github.com/tanis2000/minigame-rust/blob/4707fbea5e6150653860e331c4921c1b0f17bc59/.vscode/tasks.json#L22
             "command": "cargo build",
             "group": {
                 "kind": "build",
@@ -16,6 +18,11 @@
 //            "dependsOn": [
 //                "cargo check"
 //            ]
+        },
+        {
+            "type" : "shell",
+            "label" : "cargo run",
+            "command" : "cargo run"
         }
     ]
 }
