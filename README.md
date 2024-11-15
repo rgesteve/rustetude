@@ -1,2 +1,3 @@
 # rustetude
-Exercising the Rust programming language
+Trying out the Rust programming language (updated to 2024)
+
