@@ -1,0 +1,10 @@
+// from https://github.com/hackclub/burrow
+// a similar take, but using PLC-rust docker, is at https://github.com/jfecher/ante
+{
+    "image": "mcr.microsoft.com/devcontainers/rust",
+    "customizations": {
+      "vscode": {
+        "extensions": ["rust-lang.rust-analyzer"]
+      }
+    }
+}
