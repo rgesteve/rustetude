@@ -2,6 +2,10 @@ fn main() {
     print!("Hello, world, calling a function\n");
     gen_seq_list();
     gen_seq_list_imperative();
+    print!("Hello, world, for loop\n");
+    let index = 0;
+    for index in 0..4 { print!("{} ", index); }
+    print!(":{}", index); // index as an index variables shadows "index" on outer scope
     print!("\nDone!\n");
     std::process::exit(0);
 }
