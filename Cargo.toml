@@ -2,3 +2,7 @@
 name = "rustetude"
 version = "0.0.1"
 authors = ["R. G. Esteves <rgesteves@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+clap = {version ="*", features = ["derive"]}
