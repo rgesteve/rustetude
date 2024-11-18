@@ -1,3 +1,4 @@
+use std::time::{Instant, SystemTime};
 use clap::Parser;
 
 /// Simple program to greet a person
@@ -19,6 +20,11 @@ fn main() {
     for _ in 0..args.count {
         println!("Hello {}!", args.name);
     }
+
+    let instant = Instant::now();
+    let system_time = SystemTime::now();
+    println!("Hello, world, instant: {instant:?}");
+    println!("Hello, world, system_time: {system_time:?}");
     
     print!("Hello, world, calling a function\n");
     gen_seq_list();
