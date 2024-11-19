@@ -1,3 +1,4 @@
+use std::env;
 use std::time::{Instant, SystemTime};
 use clap::Parser;
 
@@ -20,6 +21,8 @@ fn main() {
     for _ in 0..args.count {
         println!("Hello {}!", args.name);
     }
+
+    println!("The value of HOME is: {:?}.", get_env_var(String::from("HOME"))); // or "None" if key doesn't exist
 
     let instant = Instant::now();
     let system_time = SystemTime::now();
@@ -60,6 +63,14 @@ fn gen_seq_list_imperative() {
         }
     }
     println!("{newvec:?}");
+}
+
+// Map `Result` to `Option`
+fn get_env_var(key : String) -> Option<String> {
+    match env::var(key) {
+        Ok(value) => Some(value),
+        Err(_) => None
+    }
 }
 
 #[test]
