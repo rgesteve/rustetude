@@ -30,6 +30,7 @@ fn main() {
     println!("Hello, world, system_time: {system_time:?}");
     
     print!("Hello, world, calling a function\n");
+    try_references();
     gen_seq_list();
     gen_seq_list_imperative();
     print!("Hello, world, for loop\n");
@@ -71,6 +72,13 @@ fn get_env_var(key : String) -> Option<String> {
         Ok(value) => Some(value),
         Err(_) => None
     }
+}
+
+fn try_references() {
+    let a = 42;
+    let r = &a;
+    let b = a + *r;
+    println!("a + a = {}.", b);
 }
 
 #[test]
