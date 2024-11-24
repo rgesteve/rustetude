@@ -1,4 +1,5 @@
 use std::env;
+use std::process::Command;
 use std::time::{Instant, SystemTime};
 use clap::Parser;
 
@@ -37,6 +38,13 @@ fn main() {
     let index = 0;
     for index in 0..4 { print!("{} ", index); }
     print!(":{}", index); // index as an index variables shadows "index" on outer scope
+
+    println!("Running `ls`");
+    let mut cmd = Command::new("ls");
+    let res = cmd.output();
+    assert!(res.is_ok());
+    println!("`ls` seems to have run correctly");
+
     print!("\nDone!\n");
     std::process::exit(0);
 }
