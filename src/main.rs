@@ -37,13 +37,17 @@ fn main() {
     print!("Hello, world, for loop\n");
     let index = 0;
     for index in 0..4 { print!("{} ", index); }
-    print!(":{}", index); // index as an index variables shadows "index" on outer scope
+    println!(":{}", index); // index as an index variables shadows "index" on outer scope
 
+    /* 
     println!("Running `ls`");
     let mut cmd = Command::new("ls");
     let res = cmd.output();
     assert!(res.is_ok());
     println!("`ls` seems to have run correctly");
+    */
+    let fmttest = format!("The registered instant is {:?}.\n", system_time);
+    println!("Output from format: {}", fmttest);
 
     print!("\nDone!\n");
     std::process::exit(0);
